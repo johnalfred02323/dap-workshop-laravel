@@ -1,8 +1,4 @@
 <div class="flex justify-between w-full h-full px-2 sm:pr-2 md:pr-3 lg:pr-5">
-
-    <div>
-        <img class=" w-56" src="{{ asset('image/banner-hrcp.png') }}" draggable="false" />
-    </div>
     <x-dropdown align="right" width="48" class="my-auto">
 
         <x-slot name="trigger">
