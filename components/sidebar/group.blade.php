@@ -13,13 +13,19 @@
                     {{ $label }}
                 </p>
             </div>
-            <x-icons.chevron-up class="w-7 h-7 text-gray-600 transition"
-                x-bind:class="$store.sidebar.groupIsCollapsed('{{ $label }}') || '-rotate-180'" x-cloak />
+
+            <x-filament::icon
+                icon="heroicon-m-chevron-double-up"
+                class="w-7 h-7 text-gray-600 transition"
+                x-bind:class="$store.sidebar.groupIsCollapsed('{{ $label }}') || '-rotate-180'" x-cloak
+            />
+            {{-- <x-icons.chevron-up class="w-7 h-7 text-gray-600 transition"
+                x-bind:class="$store.sidebar.groupIsCollapsed('{{ $label }}') || '-rotate-180'" x-cloak /> --}}
         </button>
     @endif
 
 
-    <ul 
+    <ul
         x-show="! ($store.sidebar.groupIsCollapsed('{{ $label }}') && $store.sidebar.isOpen)"
         x-collapse.duration.200ms
         @class([
