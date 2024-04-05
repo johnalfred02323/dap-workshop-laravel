@@ -88,7 +88,6 @@
 </head>
 
 <body class="antialiased">
-    <x-banner />
     <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
         <main>
             <div class="flex w-full min-h-screen overflow-x-clip">
@@ -113,7 +112,10 @@
                                 x-on:click="$store.sidebar.isOpen ? $store.sidebar.close() : $store.sidebar.open()"
                                 class="shrink-0 flex items-center justify-center w-10 h-10 text-primary-500 rounded-full hover:bg-gray-500/5 focus:bg-primary-500/10 focus:outline-none lg:hidden">
 
-                                <x-icons.menu class="text-primary" />
+                                <x-filament::icon
+                                    icon="heroicon-m-bars-3"
+                                    class="text-primary"
+                                />
                             </button>
 
                             <div class="flex items-center justify-end  flex-1">
